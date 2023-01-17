@@ -1,4 +1,4 @@
-import ProductInterface from "./product.inteface";
+import ProductInterface from "./product.interface";
 
 export default class Product implements ProductInterface {
 
