@@ -33,7 +33,5 @@ export default class CreateCustomerUseCase {
         city: customer.Address.city
       }
     }
-
   }
-
 }

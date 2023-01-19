@@ -6,8 +6,8 @@ export default class ListCustomerUseCase {
 
   private customerRepository: CustomerRepositoryInterface
 
-  constructor(CustomerRepository: CustomerRepositoryInterface) {
-    this.customerRepository = CustomerRepository
+  constructor(customerRepository: CustomerRepositoryInterface) {
+    this.customerRepository = customerRepository
   }
 
   async execute(input: InputListCustomerDto): Promise<OutputListCustomerDto> {
@@ -17,7 +17,6 @@ export default class ListCustomerUseCase {
     return OutputMapper.toOutput(customers)
 
   }
-
 }
 
 class OutputMapper {

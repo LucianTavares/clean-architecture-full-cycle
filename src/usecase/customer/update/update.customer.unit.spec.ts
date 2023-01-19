@@ -37,5 +37,4 @@ describe("Unit test for customer update use case", () => {
 
     expect(output).toEqual(input)
   })
-
 })

@@ -5,17 +5,7 @@ import ProductB from "../entity/productB";
 
 export default class ProductFactory {
 
-  public static create(type: string, name: string, price: number): ProductInterface {
-
-    switch (type) {
-      case "a":
-        return new Product(uuid(), name, price)
-      case "b":
-        return new ProductB(uuid(), name, price)
-      default:
-        throw new Error("Product type not supported")
-    }
-
+  public static create(name: string, price: number): ProductInterface {
+    return new Product(uuid(), name, price)
   }
-
 }
