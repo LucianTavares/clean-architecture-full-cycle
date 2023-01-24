@@ -6,6 +6,6 @@ import ProductB from "../entity/productB";
 export default class ProductFactory {
 
   public static create(name: string, price: number): ProductInterface {
-    return new Product(uuid(), name, price)
+    return new Product(uuid() || null, name, price)
   }
 }
