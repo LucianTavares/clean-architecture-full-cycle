@@ -8,7 +8,7 @@ describe("Product unit tests", () => {
 
       const product = new Product("", "Clean Code", 59.90)
 
-    }).toThrowError("Id is required")
+    }).toThrowError("product: Id is required")
   })
 
   it("should throw error when name is empty", () => {
@@ -17,7 +17,16 @@ describe("Product unit tests", () => {
 
       const product = new Product("1", "", 59.90)
 
-    }).toThrowError("Name is required")
+    }).toThrowError("product: Name is required")
+  })
+
+  it("should throw error when name is and id are empty", () => {
+
+    expect(() => {
+
+      const product = new Product("", "", 59.90)
+
+    }).toThrowError("product: Id is required,product: Name is required")
   })
 
   it("should throw error when price as zero", () => {
@@ -26,7 +35,7 @@ describe("Product unit tests", () => {
 
       const product = new Product("1", "Clean Code", 0)
 
-    }).toThrowError("Price cannot be zero")
+    }).toThrowError("product: Price cannot be zero")
   })
 
   it("should change name", () => {
